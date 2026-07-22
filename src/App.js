@@ -18,8 +18,6 @@ function App() {
     <React.Fragment>
 
       <TodoCounter completed={16} total={25} />
-      <TodoCounter completed={8} total={12} />
-      <TodoCounter completed={3} total={5} />
       <TodoSearch />
 
       <TodoList>
