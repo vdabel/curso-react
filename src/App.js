@@ -10,7 +10,7 @@ const defaultTodos = [
   { text: 'Tomar el curso de Intro a React.js', completed: false },
   { text: 'Llorar con la Llorona', completed: false },
   { text: 'JAJAJJAJAJ', completed: false }                                           
-]                                                                                                                                                                                                                                                                                                                                                                                                                 
+]                                                                                                 
 
 function App() {
   const [todos, setTodos] = React.useState(defaultTodos);
@@ -42,6 +42,7 @@ function App() {
             key={todo.text} 
             text={todo.text} 
             completed={todo.completed} 
+            setTodos={setTodos}
           />
         ))}
       </TodoList>
