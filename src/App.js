@@ -32,7 +32,7 @@ function useLocalStorage(itemName, initialValue) {
 
 
   const saveItem = (newItem) => {
-    localStorage.setItem('TODOS_V1', JSON.stringify(newItem));
+    localStorage.setItem(itemName, JSON.stringify(newItem));
     setItem(newItem);
   }
 
