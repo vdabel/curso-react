@@ -23,7 +23,7 @@ function useLocalStorage(itemName, initialValue) {
 
   if (!localStorageItem) {
     localStorage.setItem('TODOS_V1', JSON.stringify(initialValue));
-    parsedItem = [];
+    parsedItem = initialValue;
   } else {
     parsedItem = JSON.parse(localStorageItem);
   }
