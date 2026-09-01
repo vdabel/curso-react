@@ -15,13 +15,21 @@ import { useLocalStorage } from './useLocalStorage'
 
 
 function App() {
-  const [todos, saveTodos] = useLocalStorage('TODOS_V1', []);
+  const {
+    item: todos, // Renombrar la propiedad de un objeto
+    saveItem: saveTodos, 
+    loading, 
+    error
+  } = useLocalStorage('TODOS_V1', []);
+  
 
   const [searchValue, setSearchValue] = React.useState('');
-  console.log('Los usuarios buscan todos de ' + searchValue); 
 
   const completedTodos = todos.filter(todo => !!todo.completed).length;
   const totalTodos = todos.length;
+
+
+  
 
   const searchedTodos = todos.filter(todo => {
     const todoText = todo.text.toLowerCase();
@@ -44,7 +52,9 @@ function App() {
   }
 
   return (
-    <AppUI 
+    <AppUI
+      loading={loading}
+      error={error}
       completedTodos={completedTodos}
       totalTodos={totalTodos}
       searchValue={searchValue}
