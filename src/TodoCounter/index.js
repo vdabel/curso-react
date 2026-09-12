@@ -1,6 +1,14 @@
+import React from 'react';
+import { TodoContext } from '../TodoContex';
 import './TodoCounter.css';
 
-function TodoCounter({ total, completed }) {
+
+function TodoCounter() {
+  const {
+    completedTodos : completed, 
+    totalTodos : total
+  } = React.useContext(TodoContext);
+
   const flagCompleted = completed === total && total > 0;
 
   const message = () => {

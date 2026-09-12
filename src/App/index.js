@@ -3,8 +3,6 @@ import { AppUI } from './AppUI';
 import { TodoProvider } from '../TodoContex';
 
 function App() {
-  
-
   return (
     <TodoProvider>
       <AppUI />
