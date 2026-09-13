@@ -54,7 +54,6 @@ function TodoProvider({ children }) {
       setOpenModal
     }}>
       {children}
-
     </TodoContext.Provider>
   );
 }

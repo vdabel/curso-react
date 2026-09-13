@@ -59,7 +59,7 @@ function AppUI() {
         
       </TodoList>
 
-      <CreateTodoButton openModal={openModal} setOpenModal={() => setOpenModal(!openModal)} />
+      <CreateTodoButton setOpenModal={setOpenModal} />
 
       {openModal && (
         <Modal>
