@@ -10,6 +10,7 @@ import { CounterLoading } from '../CounterLoading';
 import { CreateTodoButton } from '../CreateTodoButton';
 import { TodoContext } from '../TodoContex';
 import { Modal } from '../Modal';
+import { TodoForm } from '../TodoForm';
 
 
 function AppUI() {
@@ -63,7 +64,7 @@ function AppUI() {
 
       {openModal && (
         <Modal>
-          La funcionalidad de agregar TODO
+          <TodoForm />
         </Modal>
       )}
     </>
